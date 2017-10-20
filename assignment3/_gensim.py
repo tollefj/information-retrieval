@@ -1,11 +1,11 @@
 from gensim import corpora, models, similarities
-from helpers import get_paragraphs, tokenize
+from _helpers import get_paragraphs, tokenize
 from _paragraph import Paragraph
 
 
 class GenSim:
     def __init__(self):
-        self.book = 'pg3300.txt'
+        self.book = 'data/pg3300.txt'
         self.stopwords = None
         self.corpus = list()            # paragraph tokens
         self.orig_paragraphs = list()   # unchanged paragraph
@@ -28,7 +28,7 @@ class GenSim:
         self.query("How taxes influence Economics?")
 
     def read_stopwords(self):
-        with open('stopwords.txt', 'r') as f:
+        with open('data/stopwords.txt', 'r') as f:
             self.stopwords = f.read().split(',')
 
     def load(self):

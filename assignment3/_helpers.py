@@ -1,6 +1,6 @@
 import codecs
 import re
-from stemming import stem_word
+from _stemming import stem_word
 
 
 def get_paragraphs(file_name):
@@ -23,7 +23,6 @@ def tokenize(paragraph):
             valid = False
     if valid:
         # fetch stemmed words from a memoized stemming function
-        #  word_list = list(set([stem_word(w) for w in p]))
         word_list = [stem_word(w) for w in p]
         if word_list:
             tokens = word_list

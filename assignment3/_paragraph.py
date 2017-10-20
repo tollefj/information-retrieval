@@ -1,4 +1,4 @@
-from helpers import tokenize
+from _helpers import tokenize
 
 
 class Paragraph:
