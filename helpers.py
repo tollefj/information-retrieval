@@ -26,3 +26,5 @@ def tokenize(paragraphs):
             # fetch stemmed words from a memoized stemming function
             tokens.append([stem_word(w) for w in p])
     return tokens
+
+
