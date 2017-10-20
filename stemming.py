@@ -20,3 +20,4 @@ def memoize(func):
 @memoize
 def stem_word(w):
     return stemmer.stem(w)
+
